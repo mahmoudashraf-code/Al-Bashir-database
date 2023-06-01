@@ -1,0 +1,15 @@
+{
+    "name": "bank",
+    "tables": {
+        "login": {
+            "attributes": {
+                "id": "string",
+                "pos": "postes"
+            },
+            "data": []
+        },
+        "postes": {
+            
+        }
+    }
+}

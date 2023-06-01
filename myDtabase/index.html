@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>QAD</title>
+    <link rel="stylesheet" type="text/css" href="./modules/rappid.css">
+    <link href="css/statusbar.css" rel="stylesheet">
+    <link href="css/paper.css" rel="stylesheet">
+    <link href="css/snippet.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script>
+        SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function (toElement) {
+            return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM());
+        };
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <ul>
+                <li class="add-question">
+                    <svg viewBox="0 0 96 96" overflow="hidden">
+                        <path d="M88 42 54 42 54 8 42 8 42 42 8 42 8 54 42 54 42 88 54 88 54 54 88 54Z" />
+                    </svg>
+                </li>
+                <li class="code-snippet">
+                    <svg viewBox="0 0 512 512">
+                        <path
+                            d="M160 389a20.91 20.91 0 01-13.82-5.2l-128-112a21 21 0 010-31.6l128-112a21 21 0 0127.66 31.61L63.89 256l109.94 96.19A21 21 0 01160 389zM352 389a21 21 0 01-13.84-36.81L448.11 256l-109.94-96.19a21 21 0 0127.66-31.61l128 112a21 21 0 010 31.6l-128 112A20.89 20.89 0 01352 389zM208 437a21 21 0 01-20.12-27l96-320a21 21 0 1140.23 12l-96 320A21 21 0 01208 437z">
+                        </path>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div id="paper"></div>
+            <div id="statusbar">
+                <span class="message">Selection emptied.</span>
+            </div>
+        </section>
+    </div>
+    <!-- Rappid/JointJS dependencies: -->
+    <script src="./modules/jquery.js"></script>
+    <script src="./modules/lodash.js"></script>
+    <script src="./modules/backbone.js"></script>
+
+    <script src="./modules/rappid.js"></script>
+
+    <script src="src/joint.shapes.qad.js"></script>
+    <script src="src/selection.js"></script>
+    <script src="src/factory.js"></script>
+    <script src="src/snippet.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/index.js"></script>
+    <script>joint.setTheme('modern');</script>
+</body>
+
+</html>

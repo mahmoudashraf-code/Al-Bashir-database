@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>QAD</title>
+    <link rel="stylesheet" type="text/css" href="./modules/rappid.css">
+    <link href="css/toolbar.css" rel="stylesheet">
+    <link href="css/statusbar.css" rel="stylesheet">
+    <link href="css/paper.css" rel="stylesheet">
+    <link href="css/preview.css" rel="stylesheet">
+    <link href="css/tooltip.css" rel="stylesheet">
+    <link href="css/snippet.css" rel="stylesheet">
+    <link href="css/dialog.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script>
+        SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function (toElement) {
+            return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM());
+        };
+    </script>
+
+</head>
+
+<body style="overflow: hidden;">
+    <section id="app" class="joint-theme-modern">
+        <div id="toolbar">
+            <button class="btn add-question">Add Question</button>
+            <button class="btn add-answer">Add Answer</button>
+            <button class="btn preview-dialog">Preview Dialog</button>
+            <button class="btn code-snippet">Code Snippet</button>
+        </div>
+        <div id="paper" class="joint-paper joint-theme-modern">
+            <div class="joint-paper-background" joint-selector="background"></div>
+            <div class="joint-paper-grid" joint-selector="grid"></div>
+        </div>
+        <div id="statusbar">
+            <span class="message">Selection emptied.</span>
+        </div>
+        <div id="preview" class="preview"></div>
+    </section>
+    <!-- Rappid/JointJS dependencies: -->
+    <script src="./modules/jquery.js"></script>
+    <script src="./modules/lodash.js"></script>
+    <script src="./modules/backbone.js"></script>
+
+    <script src="./modules/rappid.js"></script>
+
+    <script src="src/joint.shapes.qad.js"></script>
+    <script src="src/selection.js"></script>
+    <script src="src/factory.js"></script>
+    <script src="src/snippet.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/index.js"></script>
+    <script>joint.setTheme('modern');</script>
+
+
+</body>
+
+</html>

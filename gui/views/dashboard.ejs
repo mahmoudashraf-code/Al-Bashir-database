@@ -1,0 +1,37 @@
+<aside id="aside">
+    <header>
+        <svg viewBox="0 0 512 512"
+            onclick="aside.style.width=='29px'?aside.style.width='250px':aside.style.width='29px'">
+            <path d="M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z"></path>
+        </svg>
+        <h3>Database</h3>
+    </header>
+    <div>
+        <ul id="listOfDatabase"></ul>
+    </div>
+</aside>
+<section>
+
+</section>
+<script>
+    function loadDatabase() {
+        listOfDatabase.innerHTML = "";
+        fetch("/api/database", {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(res => {
+            return res.json()
+        }).then(json => {
+            for (let i = 0; i < json.length; i++) {
+                let li = document.createElement("li");
+                li.innerHTML = json[i]
+                listOfDatabase.appendChild(li)
+            }
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+    loadDatabase();
+</script>

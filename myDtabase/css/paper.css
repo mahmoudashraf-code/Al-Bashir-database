@@ -1,0 +1,8 @@
+#paper {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.link-tools .tool-options {
+    display: none;
+}
