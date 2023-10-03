@@ -1,0 +1,34 @@
+#body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+#body * {
+    overflow: hidden;
+}
+aside {
+    width: 250px;
+    box-shadow: 0 0 3px;
+    transition: width 0.5s;
+}
+aside header {
+    display: flex;
+    box-shadow: 0 0 2px;
+    width: 250px;
+}
+aside header h3 {
+    margin-left: 4px;
+    margin-top: 3px;
+}
+aside li {
+    border: 1px dashed;
+    margin: 2px;
+    padding: 2px;
+}
+aside li:hover {
+    background-color: #e0dede;
+}
+svg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
